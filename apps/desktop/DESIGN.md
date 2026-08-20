@@ -99,8 +99,8 @@ for call-site shadow or border inventions.
 | `--chrome-action-hover` | hover fill for quiet controls |
 | `--theme-primary`, `--ui-accent` | brand/accent |
 
-Never hardcode `border-gray-*`, `bg-white`, `text-black`, etc. The white tile in
-`BrandMark` is the one sanctioned literal (the mark needs a fixed backdrop).
+Never hardcode `border-gray-*`, `bg-white`, `text-black`, etc. Brand surfaces,
+including `BrandMark`, inherit their fill and accent from the active theme.
 
 ## Buttons — one component
 
@@ -245,10 +245,10 @@ Sizes: `default`, `xs`, `overlay` (titlebar glyph counts).
 - Pick the vocabulary by semantic context and reuse the existing icon for an
   action. Do not introduce a third icon set or mix styles within one control
   group.
-- **`BrandMark`** (`src/components/brand-mark.tsx`) is the brand glyph — the
-  `nous-girl` mark on a white tile, softly rounded, identical in light/dark.
-  It replaced scattered Sparkles glyphs in updates / onboarding / about. Use it
-  for hero/brand moments; don't reintroduce decorative star/sparkle icons.
+- **`BrandMark`** (`src/components/brand-mark.tsx`) is Structure's two-column
+  brand glyph. Its card, border, foreground, and accent are token-driven so it
+  follows the active light or dark palette without a separate image asset. Use
+  it for hero/brand moments; don't reintroduce decorative star/sparkle icons.
 
 ## Motion
 

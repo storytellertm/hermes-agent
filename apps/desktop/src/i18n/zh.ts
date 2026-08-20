@@ -3221,7 +3221,8 @@ export const zh: Translations = {
     thread: {
       loadingSession: '正在加载会话',
       showEarlier: '显示更早的消息',
-      loadingResponse: 'Hermes 正在加载回复',
+      loadingResponse: 'SPARK 正在加载回复',
+      working: 'SPARK 正在工作',
       resumeWhenBackgroundDone: count =>
         count === 1 ? '后台任务完成后将自动继续' : `${count} 个后台任务完成后将自动继续`,
       thinking: '思考中',

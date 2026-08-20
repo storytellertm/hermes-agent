@@ -2708,7 +2708,8 @@ export const ja = defineLocale({
     thread: {
       loadingSession: 'セッションを読み込み中',
       showEarlier: '以前のメッセージを表示',
-      loadingResponse: 'Hermes が応答を読み込み中',
+      loadingResponse: 'SPARK が応答を読み込み中',
+      working: 'SPARK が作業中',
       resumeWhenBackgroundDone: count =>
         count === 1
           ? 'バックグラウンドタスクの完了後に再開します'
