@@ -2419,6 +2419,7 @@ export const ar = defineLocale({
       loadingSession: 'جار تحميل الجلسة...',
       showEarlier: 'عرض الرسائل الأقدم',
       loadingResponse: 'جار تحميل الرد...',
+      working: 'SPARK يعمل',
       resumeWhenBackgroundDone: count =>
         count === 1 ? 'سيُستأنف عند انتهاء المهمة الخلفية' : `سيُستأنف عند انتهاء ${count} مهام خلفية`,
       thinking: 'يفكر...',

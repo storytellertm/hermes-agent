@@ -1,19 +1,20 @@
 import { cn } from '@/lib/utils'
 
-const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
-
-// Brand badge: nous-girl mark on a white tile, identical in light/dark.
-// Fills the tile (softly rounded); size via className (default size-14).
+// Structure's two-column mark. Keeping it in markup lets every branded surface
+// inherit the active Structure palette without another bundled image asset.
 export function BrandMark({ className, ...props }: React.ComponentProps<'span'>) {
   return (
     <span
+      aria-label="Structure"
       className={cn(
-        'inline-flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white',
+        'inline-flex size-14 shrink-0 items-end justify-center gap-1.5 overflow-hidden rounded-md border border-primary/25 bg-card px-3 py-2',
         className
       )}
+      role="img"
       {...props}
     >
-      <img alt="" className="size-full object-contain" src={assetPath('nous-girl.jpg')} />
+      <span aria-hidden="true" className="h-5 w-1.5 rounded-[1px] bg-foreground/90" />
+      <span aria-hidden="true" className="h-8 w-2 rounded-[1px] bg-primary" />
     </span>
   )
 }

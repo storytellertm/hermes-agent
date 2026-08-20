@@ -16,6 +16,14 @@ export default [
     }
   },
   {
+    // Public classic scripts execute in the renderer before the module graph.
+    // Keep them inside the normal lint lane with the same browser globals.
+    files: ['public/**/*.js'],
+    languageOptions: {
+      globals: globals.browser
+    }
+  },
+  {
     // THE PLUGIN FENCE: plugins speak @hermes/plugin-sdk (+ react), never `@/…`
     // internals — the same isolation a runtime-fetched published plugin gets,
     // enforced on bundled ones so the SDK surface stays honest and sufficient.

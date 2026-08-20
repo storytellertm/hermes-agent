@@ -34,6 +34,116 @@ const SYSTEM_MONO = 'Menlo, Monaco, "SF Mono", "Courier Prime", monospace, ' + E
 export const DEFAULT_TYPOGRAPHY: DesktopThemeTypography = { fontSans: SYSTEM_SANS, fontMono: SYSTEM_MONO }
 
 /**
+ * Structure — the SPARK desktop identity. Light mode stays cool and clean;
+ * dark mode uses quiet graphite surfaces. Structure blue carries focus,
+ * activity, and approval affordances in both.
+ */
+export const structureTheme: DesktopTheme = {
+  name: 'structure',
+  label: 'Structure',
+  description: 'Graphite surfaces with Structure blue',
+  colors: {
+    background: '#f4f7f9',
+    foreground: '#15202a',
+    card: '#ffffff',
+    cardForeground: '#15202a',
+    muted: '#e8eef2',
+    mutedForeground: '#566471',
+    popover: '#ffffff',
+    popoverForeground: '#15202a',
+    primary: '#167cca',
+    primaryForeground: '#ffffff',
+    secondary: '#dceff9',
+    secondaryForeground: '#173244',
+    accent: '#e1f3fb',
+    accentForeground: '#15202a',
+    border: '#c9d5dd',
+    input: '#ffffff',
+    ring: '#167cca',
+    midground: '#167cca',
+    midgroundForeground: '#ffffff',
+    composerRing: '#167cca',
+    destructive: '#c64c50',
+    destructiveForeground: '#ffffff',
+    sidebarBackground: '#eef3f6',
+    sidebarBorder: '#d1dce3',
+    userBubble: '#dceff9',
+    userBubbleBorder: '#a9d2e6'
+  },
+  darkColors: {
+    background: '#080d12',
+    foreground: '#f4f6f8',
+    card: '#12181e',
+    cardForeground: '#f4f6f8',
+    muted: '#171e25',
+    mutedForeground: '#b5bdc5',
+    popover: '#12181e',
+    popoverForeground: '#f4f6f8',
+    primary: '#3bb9f2',
+    primaryForeground: '#041019',
+    secondary: '#102b3a',
+    secondaryForeground: '#dff5ff',
+    accent: '#102d3e',
+    accentForeground: '#f4f6f8',
+    border: '#273440',
+    input: '#0d1319',
+    ring: '#3bb9f2',
+    midground: '#3bb9f2',
+    midgroundForeground: '#041019',
+    composerRing: '#3bb9f2',
+    destructive: '#ed7679',
+    destructiveForeground: '#080d12',
+    sidebarBackground: '#0b1117',
+    sidebarBorder: '#22303a',
+    userBubble: '#102637',
+    userBubbleBorder: '#1f5874'
+  },
+  typography: DEFAULT_TYPOGRAPHY,
+  terminal: {
+    foreground: '#15202a',
+    cursor: '#167cca',
+    selectionBackground: '#a9d2e680',
+    black: '#15202a',
+    red: '#c64c50',
+    green: '#27864b',
+    yellow: '#9a6b14',
+    blue: '#167cca',
+    magenta: '#8056b3',
+    cyan: '#247b80',
+    white: '#e8eef2',
+    brightBlack: '#566471',
+    brightRed: '#df6266',
+    brightGreen: '#36a55f',
+    brightYellow: '#b98524',
+    brightBlue: '#2798df',
+    brightMagenta: '#9a70cb',
+    brightCyan: '#359ba0',
+    brightWhite: '#ffffff'
+  },
+  darkTerminal: {
+    foreground: '#f4f6f8',
+    cursor: '#3bb9f2',
+    selectionBackground: '#1f5874',
+    black: '#080d12',
+    red: '#ed7679',
+    green: '#55d47b',
+    yellow: '#e9bf63',
+    blue: '#3bb9f2',
+    magenta: '#b98ef4',
+    cyan: '#5bd8dd',
+    white: '#d9e0e6',
+    brightBlack: '#747f89',
+    brightRed: '#ff9698',
+    brightGreen: '#77e397',
+    brightYellow: '#f5d382',
+    brightBlue: '#78d5ff',
+    brightMagenta: '#d2b0ff',
+    brightCyan: '#8ce9ec',
+    brightWhite: '#ffffff'
+  }
+}
+
+/**
  * Nous — the canonical Hermes desktop identity, forked from the GitHub VS Code
  * theme (github.github-vscode-theme). Light is GitHub Light Default, dark is
  * GitHub Dark Default, both converted through the same path a Marketplace
@@ -770,6 +880,7 @@ export const slateTheme: DesktopTheme = {
 }
 
 export const BUILTIN_THEMES: Record<string, DesktopTheme> = {
+  structure: structureTheme,
   nous: nousTheme,
   github: githubTheme,
   catppuccin: catppuccinTheme,
@@ -785,4 +896,4 @@ export const BUILTIN_THEMES: Record<string, DesktopTheme> = {
 export const BUILTIN_THEME_LIST = Object.values(BUILTIN_THEMES)
 
 /** Skin used when nothing is persisted or the persisted name is retired. */
-export const DEFAULT_SKIN_NAME = 'nous'
+export const DEFAULT_SKIN_NAME = 'structure'
