@@ -1,6 +1,31 @@
 import { describe, expect, it } from 'vitest'
 
-import { BUILTIN_THEME_LIST, DEFAULT_TYPOGRAPHY, EMOJI_FALLBACK } from './presets'
+import {
+  BUILTIN_THEME_LIST,
+  DEFAULT_SKIN_NAME,
+  DEFAULT_TYPOGRAPHY,
+  EMOJI_FALLBACK,
+  structureTheme
+} from './presets'
+
+describe('Structure desktop theme', () => {
+  it('is the default dark graphite palette', () => {
+    expect(DEFAULT_SKIN_NAME).toBe('structure')
+    expect(BUILTIN_THEME_LIST[0]).toBe(structureTheme)
+    expect(structureTheme.colors).toMatchObject({
+      background: '#f4f7f9',
+      card: '#ffffff',
+      primary: '#167cca',
+      sidebarBackground: '#eef3f6'
+    })
+    expect(structureTheme.darkColors).toMatchObject({
+      background: '#080d12',
+      card: '#12181e',
+      primary: '#3bb9f2',
+      sidebarBackground: '#0b1117'
+    })
+  })
+})
 
 // #40364: none of the UI text/mono fonts carry emoji glyphs, so every font
 // stack must end with a color-emoji fallback or emoji render as tofu on
